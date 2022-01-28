@@ -25,7 +25,8 @@ public class Lab2P2_FavioNataren_22141210 {
     public static Animal animalc = new Animal();
 
     public static void main(String[] args) {
-                            
+         
+        //animales por defecto
         animala = new Animal("Lechuza", "Tyto alba", "llanuras ", "animales pequenos", "‎", "Centroamérica y América del Sur", 3);
         animalb = new Animal("Panthera leo", "León", "selvas", "carnivora", "centroamerica ", "selvas", 2);
         animalc = new Animal("Panthera pardus", "Leopardo", "selvas ", "Carnívora", "tienen manchas", "América del Sur", 17 );
@@ -69,6 +70,31 @@ public class Lab2P2_FavioNataren_22141210 {
         }
     }
 
+    public static void crearAlumnos() {
+        System.out.print("Nombre Cientifico: ");
+        String nombreCientifico = leer.nextLine();
+        
+        System.out.print("Nombre Comun: ");
+        String nombreComun = leer.next(); 
+        
+        System.out.print("Habitat: ");
+        String habitat = leer.next();
+        
+        System.out.print("Alimentacion: ");
+        String alimentacion = leer.next();
+        
+        System.out.print("Rasgos: ");
+        String rasgos = leer.nextLine();
+        
+        System.out.print("Geografica: ");
+        String geografica = leer.nextLine();
+        
+        System.out.print("Vida: ");
+        int vida = leer.nextInt();
+        
+        lista.add(new Animal(nombreCientifico, nombreComun, habitat, alimentacion, rasgos, geografica, vida));
+    }
 
+    
 
 }
