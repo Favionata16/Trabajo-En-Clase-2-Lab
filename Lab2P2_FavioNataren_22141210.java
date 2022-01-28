@@ -60,6 +60,8 @@ public class Lab2P2_FavioNataren_22141210 {
             case 4:
                 listarAnimal();
                 break;
+
+     
             case 0:
                 System.exit(0);    
             default:
@@ -68,6 +70,7 @@ public class Lab2P2_FavioNataren_22141210 {
     }
 
     public static void crearAnimal() {
+        
         System.out.print("Nombre Cientifico: ");
         String nombreCientifico = leer.nextLine();
         
@@ -92,6 +95,10 @@ public class Lab2P2_FavioNataren_22141210 {
         lista.add(new Animal(nombreCientifico, nombreComun, habitat, alimentacion, rasgos, geografica, vida));
     }
 
+
+    
+    
+        
     public static void editarAnimal() {
         System.out.print("Ingrese la posicion: ");
         int pos = leer.nextInt();
@@ -161,6 +168,40 @@ public class Lab2P2_FavioNataren_22141210 {
         }
     }
 
-    
+    public static void editarAtributos(int pos) {
+        System.out.print("Nombre Cientifico: ");
+        lista.get(pos).setNombreCientifico(leer.next());
+        
+        System.out.print("NombreComun: ");
+        lista.get(pos).setNombreComun(leer.next());
+        
+        System.out.print("Habitat: ");
+        lista.get(pos).setHabitat(leer.next());
+        
+        System.out.println("Alimentacion: ");
+        lista.get(pos).setAlimentacion(leer.next());
+        
+        System.out.print("Rasgos: ");
+        lista.get(pos).setRasgos(leer.next());
+        
+        System.out.print("Descripcion Geografica: ");
+        lista.get(pos).setDescripcionGeo(leer.next());
+        
+        System.out.println("Vida : ");
+        lista.get(pos).setVida(leer.nextInt());
+    }
+
+    public static void eliminarAnimal() {
+        System.out.print("Posicion: ");
+        lista.remove(leer.nextInt());
+    }
+
+    public static void listarAnimal() {
+        for (Animal animales : lista) {
+            System.out.println(animales.toString());
+        }
+    }
+
+
 
 }
