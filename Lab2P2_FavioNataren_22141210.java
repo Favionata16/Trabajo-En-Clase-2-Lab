@@ -48,6 +48,27 @@ public class Lab2P2_FavioNataren_22141210 {
         return leer.nextInt();
     }
 
+    public static void opcion(int opcion) {
+        switch (opcion) {
+            case 1:
+                crearAlumnos();
+                break;
+            case 2:
+                editarAlumno();
+                break;
+            case 3:
+                eliminarAnimal();
+                break;
+            case 4:
+                listarAnimal();
+                break;
+            case 0:
+                System.exit(0);    
+            default:
+                break;
+        }
+    }
+
 
 
 }
