@@ -37,5 +37,17 @@ public class Lab2P2_FavioNataren_22141210 {
         } while (true);
     }
 
+    public static int menu() {
+        System.out.println("----- MENU -----");
+        System.out.println("\n1. Crear alumnos"
+                + "\n2. Editar alumnos"
+                + "\n3. Eliminar alumno"
+                + "\n4. Listar alumnos"
+                + "\n0. salir"
+                + "\nIngrese la opcion: ");
+        return leer.nextInt();
+    }
+
+
 
 }
