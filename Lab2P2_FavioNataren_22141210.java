@@ -16,9 +16,6 @@ public class Lab2P2_FavioNataren_22141210 {
 
     public static Scanner leer = new Scanner(System.in);
 
-    /**
-     * @param args the command line arguments
-     */
     public static ArrayList<Animal> lista = new ArrayList();                    
     public static Animal animala = new Animal();
     public static Animal animalb = new Animal();
@@ -40,10 +37,10 @@ public class Lab2P2_FavioNataren_22141210 {
 
     public static int menu() {
         System.out.println("----- MENU -----");
-        System.out.println("\n1. Crear alumnos"
-                + "\n2. Editar alumnos"
-                + "\n3. Eliminar alumno"
-                + "\n4. Listar alumnos"
+        System.out.println("\n1. Crear Animales"
+                + "\n2. Editar Animales"
+                + "\n3. Eliminar Animales"
+                + "\n4. Listar Animales"
                 + "\n0. salir"
                 + "\nIngrese la opcion: ");
         return leer.nextInt();
@@ -52,10 +49,10 @@ public class Lab2P2_FavioNataren_22141210 {
     public static void opcion(int opcion) {
         switch (opcion) {
             case 1:
-                crearAlumnos();
+                crearAnimal();
                 break;
             case 2:
-                editarAlumno();
+                editarAnimal();
                 break;
             case 3:
                 eliminarAnimal();
@@ -70,7 +67,7 @@ public class Lab2P2_FavioNataren_22141210 {
         }
     }
 
-    public static void crearAlumnos() {
+    public static void crearAnimal() {
         System.out.print("Nombre Cientifico: ");
         String nombreCientifico = leer.nextLine();
         
@@ -93,6 +90,75 @@ public class Lab2P2_FavioNataren_22141210 {
         int vida = leer.nextInt();
         
         lista.add(new Animal(nombreCientifico, nombreComun, habitat, alimentacion, rasgos, geografica, vida));
+    }
+
+    public static void editarAnimal() {
+        System.out.print("Ingrese la posicion: ");
+        int pos = leer.nextInt();
+        
+        System.out.println("1. Un atributo"
+                +"2. Todos los atributos");
+        System.out.print("Ingrese la opcion: ");
+        int opcion = leer.nextInt();
+        
+        if (opcion == 1) {
+            editarAtributo(pos);
+        } else if (opcion == 2) {
+            editarAtributos(pos);
+        }
+    }
+
+    public static void editarAtributo(int pos) {
+        
+        System.out.println("1. Nombre Cientifico"
+                +"2. Nombre Comun"
+                +"3. Habitat"
+                +"4. Alimentacion"
+                +"5. Rasgos"
+                +"6. Geografica"
+                +"7. Vida"
+                +"Ingrese la opcion: ");
+        int opcion = leer.nextInt();
+        
+        switch (opcion) {
+            case 1:
+                System.out.print("Nombre Cientifico: ");
+                lista.get(pos).setNombreCientifico(leer.next());
+                break;
+                
+            case 2:
+                System.out.print("Nombre Comun: ");
+                lista.get(pos).setNombreComun(leer.next());
+                break;
+                
+            case 3:
+                System.out.print("Habitat: ");
+                lista.get(pos).setHabitat(leer.next());
+                break;
+                
+            case 4:
+                System.out.println("Alimentacion: ");
+                lista.get(pos).setAlimentacion(leer.next());
+                break;
+                
+            case 5:
+                System.out.print("Descripcion de rasgos: ");
+                lista.get(pos).setRasgos(leer.next());
+                break;
+                
+            case 6:
+                System.out.print("Descripcion Geografica: ");
+                lista.get(pos).setDescripcionGeo(leer.next());
+                break;
+                
+            case 7:
+                System.out.println("Vida: ");
+                lista.get(pos).setVida(leer.nextInt());
+                break;
+                
+            default:
+                break;
+        }
     }
 
     
