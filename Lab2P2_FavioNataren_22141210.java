@@ -20,6 +20,7 @@ public class Lab2P2_FavioNataren_22141210 {
     public static Animal animala = new Animal();
     public static Animal animalb = new Animal();
     public static Animal animalc = new Animal();
+    public static int buscar = 0;
 
     public static void main(String[] args) {
          
@@ -61,7 +62,15 @@ public class Lab2P2_FavioNataren_22141210 {
                 listarAnimal();
                 break;
 
-     
+
+            case 5:
+                System.out.println("Elegia el nombre cientifico que quiere buscar: ");
+                String nombre = leer.next();
+                buscarAnimal(nombre);
+                if(buscar==2)
+                    System.out.println(lista.toString());
+                break;
+      
             case 0:
                 System.exit(0);    
             default:
@@ -86,7 +95,7 @@ public class Lab2P2_FavioNataren_22141210 {
         System.out.print("Rasgos: ");
         String rasgos = leer.nextLine();
         
-        System.out.print("Geografica: ");
+        System.out.print("Descripcion Geografica: ");
         String geografica = leer.nextLine();
         
         System.out.print("Vida: ");
@@ -96,8 +105,6 @@ public class Lab2P2_FavioNataren_22141210 {
     }
 
 
-    
-    
         
     public static void editarAnimal() {
         System.out.print("Ingrese la posicion: ");
@@ -199,6 +206,15 @@ public class Lab2P2_FavioNataren_22141210 {
     public static void listarAnimal() {
         for (Animal animales : lista) {
             System.out.println(animales.toString());
+        }
+    }
+
+    private static void buscarAnimal(String nombreCientifico) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).getNombreCientifico().equals(nombreCientifico)) {
+                buscar = 2;
+                break;
+            }
         }
     }
 
