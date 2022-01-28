@@ -26,7 +26,7 @@ public class Lab2P2_FavioNataren_22141210 {
          
         //animales por defecto
         animala = new Animal("Lechuza", "Tyto alba", "llanuras ", "animales pequenos", "‎", "Centroamérica y América del Sur", 3);
-        animalb = new Animal("Panthera leo", "León", "selvas", "carnivora", "centroamerica ", "selvas", 2);
+        animalb = new Animal("Panthera", "León", "selvas", "carnivora", "centroamerica ", "selvas", 2);
         animalc = new Animal("Panthera pardus", "Leopardo", "selvas ", "Carnívora", "tienen manchas", "América del Sur", 17 );
         lista.add(animala);
         lista.add(animalb);
@@ -42,6 +42,7 @@ public class Lab2P2_FavioNataren_22141210 {
                 + "\n2. Editar Animales"
                 + "\n3. Eliminar Animales"
                 + "\n4. Listar Animales"
+                + "\n5. Buscar animal"
                 + "\n0. salir"
                 + "\nIngrese la opcion: ");
         return leer.nextInt();
