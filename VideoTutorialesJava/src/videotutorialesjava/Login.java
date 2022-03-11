@@ -15,7 +15,7 @@ public class Login extends javax.swing.JFrame {
     }
     
     void iniciarSesion(){
-        String user, pass, usuario="admin", contrasenia="12";
+        String user, pass, usuario="admin", contrasenia="12hjghj";
         user = txtUser.getText();
         pass = String.valueOf(txtPass.getPassword());
         if(user.equals(usuario)&&pass.equals(contrasenia)){
